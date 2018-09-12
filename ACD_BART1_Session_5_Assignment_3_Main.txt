@@ -1,0 +1,109 @@
+﻿  Session 5 – Data
+Management using R
+   Assignment - 3
+Contents
+
+  Introduction ..................................................................................................................................................... 2
+
+  Objective .......................................................................................................................................................... 2
+
+  Prerequisites .................................................................................................................................................... 2
+
+  Associated Data Files ....................................................................................................................................... 2
+
+  Problem Statement ......................................................................................................................................... 2
+
+  Expected Output .............................................................................................................................................. 2
+
+
+
+
+   Copyrights© 2017, AcadGild. All Rights Reserved                                                                                                                1
+   Introduction
+This assignment will help you to understand the key concepts learnt in this session.
+
+
+   Objective
+This assignment will test your skills on Data Management Functions in R.
+
+
+   Prerequisites
+Not Applicable
+
+
+   Associated Data Files
+Not Applicable
+
+
+   Problem Statement
+1. Test whether two vectors are exactly equal (element by element).
+vec1 = c(rownames(mtcars[1:15,]))
+vec2 = c(rownames(mtcars[11:25,]))
+
+Answer:
+> all.equal.character(vec1,vec2)
+[1] "15 string mismatches"
+>     
+
+
+
+2. Sort the character vector in ascending order and descending order.
+vec1 = c(rownames(mtcars[1:15,]))
+vec2 = c(rownames(mtcars[11:25,]))
+
+Answer:
+
+# vec1 sort ascending
+> vec1_asc<-sort(vec1,decreasing = FALSE)
+> vec1_asc
+
+# vec2 sort ascending
+> vec2_acs<-sort(vec2,decreasing = FALSE)
+> vec2_acs
+
+# vec1 sort descending
+> vec1_dec<-sort(vec1,decreasing = TRUE)
+> vec1_dec
+
+# vec2 sort descending
+> vec2_dec<-sort(vec2,decreasing = TRUE)
+> vec2_dec
+
+	
+
+3. What is the major difference between str() and paste() show an example.
+
+Answer:
+Paste()
+paste converts its arguments (via as.character) to character strings, and concatenates them (separating them by the string given by sep). If the arguments are vectors, they are concatenated term-by-term to give a character vector result. Vector arguments are recycled as needed, with zero-length arguments being recycled to "".
+
+Example:
+> paste("Hello","World",sep=" ",collapse = "-")
+[1] "Hello World"
+> 
+
+Str()
+Compactly Display The Structure Of An Arbitrary R Object
+Compactly display the internal structure of an R object, a diagnostic function and an alternative to summary (and to some extent, dput). Ideally, only one line for each ‘basic’ structure is displayed. It is especially well suited to compactly display the (abbreviated) contents of (possibly nested) lists. The idea is to give reasonable output for any R object. It calls args for (non-primitive) function objects.
+
+Example:
+str(vec1)
+str(vec2_acs)
+
+
+
+
+4. Introduce a separator when concatenating the strings.
+
+> paste("Hi","This","Is","R","Language",sep = "--")
+[1] "Hi--This--Is--R--Language"
+> 
+
+
+   Expected Output
+Not Applicable
+
+
+
+  Copyrights© 2017, AcadGild. All Rights Reserved                                      2
+
